@@ -22,3 +22,10 @@ Route::get('/for', function() {
     'anuu' => ['makan', 'ngeroko', 'tidur']
   ]);
 });
+
+Route::get('/loop-variable', function() {
+  return view('loop-variable', [
+    'mobil' => ['alphard', 'fortuner', 'rubicon'],
+    'tasks' => ['tugas 1', 'tugas 2']
+  ]);
+});

@@ -11,9 +11,9 @@
       {{ $loop->iteration . '. ' . $mbl }}
   @endforeach
 
-
+<ul>
   @foreach ($tasks as $task)
-      <p>{{$task}}</p>
+      <li>{{$task}}</li>
       @if ($loop->remaining > 0)
           <small>tersisa {{ $loop->remaining }} tugas lagi </small>
       @else
@@ -24,5 +24,6 @@
         <p>Selasai🎉</p>
       @endif
   @endforeach
+</ul>
 </body>
 </html>
