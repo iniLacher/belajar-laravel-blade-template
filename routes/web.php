@@ -15,3 +15,10 @@ Route::get('/hello', function(){
 Route::get('/endcoding', function(Request $request){
   return view('html-endcoding', ['isi' => $request->input('isi')]);
 });
+
+Route::get('/for', function() {
+  return view('for', [
+    'hobbies' => ['ngoding', 'ngegame', 'learn'],
+    'anuu' => ['makan', 'ngeroko', 'tidur']
+  ]);
+});
