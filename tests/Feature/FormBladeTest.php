@@ -16,4 +16,16 @@ class FormBladeTest extends TestCase
     ->assertSee('kingabdi')
     ->assertSee('readonly');
   }
+
+
+  public function testFalseForm() {
+    $this->view('form', [ 'user' => [
+      'name' => 'kingudin',
+      'premium' => false,
+      'admin' => true
+    ]])
+    ->assertDontSee('checked')
+    ->assertSee('kingudin')
+    ->assertDontSee('readonly');
+  }
 }
